@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShottyMe</title>
+    <link rel="icon" href="/images/short.jpg" type="image/jpeg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header
+      style="background-color: #f2ede4"
+      class="w-100 d-flex justify-content-between p-2 mb-4"
+    >
+      <p style="color: orange; font-size: 2rem; text-shadow: 2px 2px">
+        <i><span style="color: red">Shotty</span>Me</i>
+      </p>
+      <div>
+        <a href="/dashboard"
+          ><button class="btn btn-lg btn-primary btn-block" type="button">
+            Home
+          </button></a
+        >
+      </div>
+    </header>
+
+    <table
+      class="table table-dark table-striped table-responsive"
+      style="word-wrap: break-word; table-layout: fixed"
+    >
+      <thead>
+        <tr class="text-center">
+          <th scope="col">Note</th>
+          <th scope="col">Short Url</th>
+          <th scope="col">Visited No</th>
+          <th scope="col">Date Created</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% allUrls.map((url)=>{ %>
+
+        <tr class="text-center">
+          <td>
+            <a
+              class="text-white text-decoration-none"
+              target="_blank"
+              href="http://localhost:8080/<%=url.shortId%>"
+              ><%= url.description %></a
+            >
+          </td>
+          <td>
+            <a
+              class="text-white"
+              target="_blank"
+              href="http://localhost:8080/<%=url.shortId%>"
+              >http://localhost:8080/<%=url.shortId%></a
+            >
+          </td>
+          <td><%= url. totalClicks %></td>
+          <td><%=url.timestamp%></td>
+        </tr>
+        <%})%>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -1,9 +1,9 @@
 const express = require("express");
-const { handleRegistration } = require("./controller");
+const { handleRegistration, handleHome, handleLogin } = require("./controller");
 const router = express.Router();
 
 router.get("/", handleHome);
-router.get("/", handleLogin);
-router.get("/", handleRegistration);
+router.get("/login", handleLogin);
+router.get("/registration", handleRegistration);
 
 module.exports = router;

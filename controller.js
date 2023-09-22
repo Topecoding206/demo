@@ -2,6 +2,7 @@ const randomStr = require("randomstring");
 const bcrypt = require("bcrypt");
 const URL = require("./models/url");
 const users = require("./models/user");
+const validateURL = require("valid-url");
 
 // view controller
 exports.handleHome = (req, res) => {

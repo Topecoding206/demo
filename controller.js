@@ -5,7 +5,7 @@ const users = require("./models/user");
 
 // view controller
 exports.handleHome = (req, res) => {
-  res.render("index");
+  res.render("login");
 };
 exports.handleLogin = (req, res) => {
   res.render("login");

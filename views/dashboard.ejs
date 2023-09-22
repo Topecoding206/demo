@@ -102,7 +102,7 @@
           undefined? true:shortUrl["default"] ){ %>
           <button
             class="input-group-text btn btn-secondary"
-            onclick='copyToClipboard("https://shottyme.onrender.com<%= shortUrl[shortUrl.length - 1].shortId || shortUrl[0]._doc.shortId   %>")'
+            onclick='copyToClipboard("https://shottyme.onrender.com/<%= shortUrl[shortUrl.length - 1].shortId || shortUrl[0]._doc.shortId   %>")'
           >
             Copy Link
           </button>

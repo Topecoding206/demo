@@ -33,7 +33,7 @@ exports.handleGenerateNewShortURL = async (req, res, next) => {
     if (finds) {
       const shortUrl = [{ ...finds }];
       shortUrl["default"] = true;
-      res.render("index", { shortUrl: shortUrl });
+      res.render("dashboard", { shortUrl: shortUrl });
     } else {
       await URL.create({
         shortId: shortID,
@@ -43,7 +43,7 @@ exports.handleGenerateNewShortURL = async (req, res, next) => {
       });
       const shortUrl = [{ shortId: shortID, default: true }];
 
-      res.render("index", { shortUrl: shortUrl });
+      res.render("dashboard", { shortUrl: shortUrl });
     }
   } catch (error) {
     console.log("something went wrong");

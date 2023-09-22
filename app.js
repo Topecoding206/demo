@@ -31,6 +31,10 @@ app.use(
     secret: "secret store",
     resave: false,
     saveUninitialized: true,
+    cookie: {
+      maxAge: 1000 * 60 * 60 * 24, //1 week
+      secure: true,
+    },
   })
 );
 // Define a route to render the index.ejs view

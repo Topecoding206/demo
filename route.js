@@ -14,7 +14,7 @@ const {
 const { isAuthenticated, isLoginAlreadyAuth } = require("./authentication");
 const router = express.Router();
 
-router.get("/", handleHome);
+router.get("/", isLoginAlreadyAuth, handleHome);
 router.get("/dashboard", isAuthenticated, handleDashboard);
 router.get("/logout", handlesLogout);
 router.get("/login", isLoginAlreadyAuth, handleLogin);

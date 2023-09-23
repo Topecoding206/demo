@@ -3,7 +3,10 @@
 
 ## Overview
 
-shottyme is a web application used to generate short url, this app was built using Express.js for the backend, EJS for views, Mongoose for the database, and the randomstring and validate-url npm packages for generating random strings and validating URLs, respectively.
+shottyme is a web application used to generate short url from a long url, this app was built using Express.js for the backend, EJS for views, Mongoose for the database, and the randomstring and validate-url npm packages for generating random strings and validating URLs, respectively. 
+
+## Demo 
+visit url https://shottyme.onrender.com
 
 ## Table of Contents
 
@@ -60,12 +63,6 @@ To create a shortened URL:
 2. Click the "Shorten" button.
 3. The system will generate a unique short URL for your input.
 
-To validate a URL:
-
-1. Click on the "Validate URL" option in the navigation menu.
-2. Enter a URL in the validation input field.
-3. Click the "Validate" button.
-4. The system will check if the URL is valid and display the result.
 
 ## Features
 
